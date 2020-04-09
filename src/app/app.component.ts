@@ -24,6 +24,5 @@ export class AppComponent {
     this.commentService.getComments().subscribe(value => this.comments = value);
     this.postService.getPosts().subscribe(value => this.posts = value);
     this.userService.getUsers().subscribe(value => this.users = value);
-
   }
 }

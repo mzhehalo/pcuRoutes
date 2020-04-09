@@ -9,3 +9,15 @@
   clear: both;
 }
 
+.posts {
+  background-color: aliceblue;
+}
+
+.users {
+  background-color: antiquewhite;
+}
+
+.comments {
+  background-color: gainsboro;
+}
+

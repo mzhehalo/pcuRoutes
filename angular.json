@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngPostsAndCom"
+    }
+  },
+  "defaultProject": "ngPostsAndCom",
+  "cli": {
+    "analytics": "f6d8f81b-1b0c-4747-9d3e-a2f4262743b1"
+  }
 }
