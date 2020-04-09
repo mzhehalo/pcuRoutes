@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+// @ts-ignore
+import {CommentModel} from '../model/CommentModel';
 import {CommentService} from './services/comment/comment.service';
 // @ts-ignore
-import {CommentModel} from '../Model/CommentModel';
-// @ts-ignore
-import {PostModel} from '../Model/PostModel';
+import {PostModel} from '../model/PostModel';
 import {PostService} from './services/post/post.service';
+// @ts-ignore
+import {UserModel} from '../model/UserModel';
+import {UserService} from './services/user/user.service';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +19,11 @@ export class AppComponent {
 
   comments: CommentModel[];
   posts: PostModel[];
-  constructor(private userService: CommentService, private postService: PostService) {
-    this.userService.getComments().subscribe(value => this.comments = value);
+  users: UserModel[];
+  constructor(private commentService: CommentService, private postService: PostService, private userService: UserService) {
+    this.commentService.getComments().subscribe(value => this.comments = value);
     this.postService.getPosts().subscribe(value => this.posts = value);
+    this.userService.getUsers().subscribe(value => this.users = value);
 
   }
 }
