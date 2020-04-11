@@ -1,0 +1,19 @@
+<p>all-users works!</p>
+<!--<ul class="column users">&ndash;&gt;-->
+<!--  <li *ngFor="let u of users">-->
+<!--&lt;!&ndash;    {{u | json}}&ndash;&gt;-->
+<!--    <div>-->
+<!--      <div>{{u.id}}</div>-->
+<!--      <div>{{u.name}}</div>-->
+<!--      <div>{{u.username}}</div>-->
+<!--      <div>{{u.website}}</div>-->
+<!--    </div>-->
+
+<!--  </li>-->
+<!--</ul>-->
+<!--<div class="column users">&ndash;&gt;-->
+<router-outlet></router-outlet>
+<hr>
+<app-user *ngFor="let su of users" [user]="su"></app-user>
+<!--</div>-->
+
