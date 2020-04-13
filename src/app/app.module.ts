@@ -9,10 +9,16 @@ import {RouterModule, Routes} from '@angular/router';
 import { HelloComponent } from './components/hello/hello.component';
 import { AllUsersComponent } from './components/all-users/all-users.component';
 import {UserResolverService} from './services/user-resolver.service';
+import {CommentResolverService} from './services/comment-resolver.service';
+import { AllCommentsComponent } from './components/all-comments/all-comments.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import {PostResolverService} from './services/post-resolver.service';
 
 const routes: Routes = [
   {path: '', component: HelloComponent},
-  {path: 'users', component: AllUsersComponent, resolve: {allUsers: UserResolverService}}
+  {path: 'users', component: AllUsersComponent, resolve: {allUsers: UserResolverService}},
+  {path: 'comments', component: AllCommentsComponent, resolve: {comment: CommentResolverService}},
+  {path: 'posts', component: AllPostsComponent, resolve: {post: PostResolverService}},
 ];
 
 @NgModule({
@@ -22,7 +28,9 @@ const routes: Routes = [
     CommentComponent,
     UserComponent,
     HelloComponent,
-    AllUsersComponent
+    AllUsersComponent,
+    AllCommentsComponent,
+    AllPostsComponent
   ],
   imports: [
     BrowserModule,
